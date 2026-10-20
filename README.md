@@ -19,7 +19,7 @@ The auction proceeds in discrete rounds:
 3. If aggregate demand exceeds the available supply, the price increases by a fixed increment, `delta_p`.
 4. The process continues until total demand no longer exceeds supply, at which point the auction terminates.
 
-Each bidder has a marginal valuation vector. For bidder `i`, let `v_i[j]` denote the marginal valuation of item `j`. Their total value for acquiring `k` items is
+Each bidder has a marginal valuation vector. For bidder `i`, let $$`v_i[j]`$$ denote the marginal valuation of item `j`. Their total value for acquiring `k` items is
 
 $$
 \[
@@ -30,21 +30,25 @@ $$
 
 At price `p`, the utility associated with demanding `k` items is
 
+$$
 \[
 U_i(k,p)=V_i(k)-kp.
 \]
+$$
 
 ### Opponent valuation assumptions
 
 The model makes specific assumptions about the opponents' valuations and behavior.
 
-Each opponent's marginal valuations are drawn from a uniform distribution on the interval `[0, zmax]`. The sampled marginal valuations are arranged in decreasing order, so that the marginal value of an additional item does not exceed that of the preceding item.
+Each opponent's marginal valuations are drawn from a uniform distribution on the interval $$`[0, zmax]`$$. The sampled marginal valuations are arranged in decreasing order, so that the marginal value of an additional item does not exceed that of the preceding item.
 
 For each opponent `i`, the marginal valuations satisfy
 
+$$
 \[
 v_{i,1}\geq v_{i,2}\geq\cdots\geq v_{i,m}.
 \]
+$$
 
 Once sampled, the valuations remain fixed throughout the auction.
 
@@ -54,17 +58,20 @@ The strategic player does not directly observe the opponents' valuation vectors.
 
 All opponents follow the **straightforward bidding (SB)** strategy. At each price `p`, opponent `i` demands a quantity that maximizes their current utility:
 
+$$
 \[
 \delta_i(p)\in
 \underset{k\in\{0,\ldots,m\}}{\arg\max}
 \left[V_i(k)-kp\right].
-\]
+\]$$
 
 The total demand of the opponents is the sum of their individual demands:
 
+$$
 \[
 \Delta(p)=\sum_{i=1}^{n-1}\delta_i(p),
 \]
+$$
 
 where `n` is the total number of bidders, including the strategic player.
 
