@@ -21,10 +21,12 @@ The auction proceeds in discrete rounds:
 
 Each bidder has a marginal valuation vector. For bidder `i`, let `v_i[j]` denote the marginal valuation of item `j`. Their total value for acquiring `k` items is
 
+$$
 \[
 V_i(k)=\sum_{j=1}^{k}v_{i,j},
 \qquad V_i(0)=0.
 \]
+$$
 
 At price `p`, the utility associated with demanding `k` items is
 
