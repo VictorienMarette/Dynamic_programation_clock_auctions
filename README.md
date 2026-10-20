@@ -19,7 +19,7 @@ The auction proceeds in discrete rounds:
 3. If aggregate demand exceeds the available supply, the price increases by a fixed increment, `delta_p`.
 4. The process continues until total demand no longer exceeds supply, at which point the auction terminates.
 
-Each bidder has a marginal valuation vector. For bidder \(i\), let \(v_{i,j}\) denote the marginal valuation of item \(j\). Their total value for acquiring \(k\) items is
+Each bidder has a marginal valuation vector. For bidder \(i\), let $$v_{i,j}$$ denote the marginal valuation of item \(j\). Their total value for acquiring \(k\) items is
 
 $$
 \Large
@@ -56,9 +56,9 @@ The strategic player does not directly observe the opponents' valuation vectors.
 All opponents follow the **straightforward bidding (SB)** strategy. At each price \(p\), opponent \(i\) demands a quantity that maximizes their current utility:
 
 $$
-\Large
+\displaystyle
 \delta_i(p)\in
-\underset{k\in\{0,\ldots,m\}}{\arg\max}
+\operatorname*{arg\,max}_{k\in\{0,\ldots,m\}}
 \left\{V_i(k)-kp\right\}.
 $$
 
