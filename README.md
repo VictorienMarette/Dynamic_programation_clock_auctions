@@ -56,9 +56,9 @@ The strategic player does not directly observe the opponents' valuation vectors.
 All opponents follow the **straightforward bidding (SB)** strategy. At each price \(p\), opponent \(i\) demands a quantity that maximizes their current utility:
 
 $$
-\delta_i(p)\in
-\underset{k\in\{0,\ldots,m\}}{\arg\max}
-\left\{V_i(k)-kp\right\}.
+\delta_i(p) \in
+\underset{k \in \{0,\ldots,m\}}{\arg\max}
+[ V_i(k) - kp ].
 $$
 
 The total demand of the opponents is the sum of their individual demands:
