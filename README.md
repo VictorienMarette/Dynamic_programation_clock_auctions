@@ -76,6 +76,10 @@ The strategic player's valuation vector is supplied separately to the auction mo
 
 The model is inspired by the French 5G spectrum auction but is a simplified computational model, not a full reproduction of the official auction rules.
 
+### Partially Observable Markov Decision Process (POMDP)
+
+The strategic player's bidding problem is modeled as a **partially observable Markov decision process (POMDP)**. Since the opponents' individual valuations are unknown, the player relies on observed aggregate demand to infer information about their behavior. The dynamic programming algorithm uses this information to determine an optimal bidding policy that maximizes the player's expected utility under uncertainty.
+
 ## 2. Implemented functionalities
 
 ### Auction initialization
